@@ -1,5 +1,13 @@
 # Jackal Actor Simulation
 
+<p align="center">
+  <img src="assets/gazebo.png" alt="Gazebo simulation showing the Jackal robot, actor, obstacles, and teleoperation panel">
+</p>
+
+<p align="center">
+  <img src="assets/rviz2.png" alt="RViz visualization showing Jackal sensor point clouds and camera view">
+</p>
+
 ROS 2 Humble / Gazebo Fortress simulation containing:
 
 - Clearpath Jackal J100
