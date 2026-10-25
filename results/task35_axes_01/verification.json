@@ -1,0 +1,43 @@
+{
+  "default_view_positive_x_up_positive_y_left": true,
+  "mouse_draw_move_delete_undo_redo_numeric_validation": true,
+  "waypoints": [
+    [
+      -1.5,
+      -1.5
+    ],
+    [
+      -0.5,
+      -1.5
+    ],
+    [
+      -0.5,
+      -1.1977719464051653
+    ],
+    [
+      -0.5,
+      -0.9011101640137928
+    ],
+    [
+      -0.5,
+      -0.5
+    ]
+  ],
+  "preview_does_not_publish": true,
+  "view_rotation_preserves_csv_time_and_experiment": true,
+  "publisher_returncode": 0,
+  "raw_samples": 118,
+  "comparison_samples": 201,
+  "full_time_coverage": true,
+  "mean_error_m": 0.006472730217052268,
+  "max_error_m": 0.006500046253204328,
+  "first_gt_xy": [
+    -1.5,
+    -1.5
+  ],
+  "last_gt_xy": [
+    -0.5,
+    -0.506499993801117
+  ],
+  "output_dir": "/tmp/jackal_task35_axes_verification/runs/run_20261025T081456Z_aa3cef"
+}

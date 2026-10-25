@@ -37,6 +37,21 @@
 
     </plugin>
 
+    <!-- Task 3-3: external world-frame targets override the actor's SDF path. -->
+    <plugin filename="libjackal_actor_controller.so"
+            name="jackal_actor_controller::ActorController">
+      <frame_id>world</frame_id>
+      <animation_timeout>0.3</animation_timeout>
+      <mapping>
+        <person_id>human_1</person_id>
+        <actor_name>walking_person</actor_name>
+        <topic>/humans/human_1/target_pose</topic>
+        <legacy_topic>/humans/walking_person/target_pose</legacy_topic>
+        <animation>walk</animation>
+        <yaw_offset>0</yaw_offset>
+      </mapping>
+    </plugin>
+
 
     <!-- ======================= -->
     <!-- Lighting -->

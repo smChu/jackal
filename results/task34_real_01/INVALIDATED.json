@@ -1,0 +1,4 @@
+{
+  "valid_ground_truth": false,
+  "reason": "Invalidated diagnostic run: cached Actor.WorldPose was stale because the test camera had no image subscriber. Do not use as fresh ground truth."
+}

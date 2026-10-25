@@ -89,8 +89,9 @@ if [ ! -d "$CLEARPATH_SIM" ]; then
     exit 1
 fi
 
-cp "$REPO_DIR/worlds/jackal_actor_world.sdf" \
-   "$CLEARPATH_SIM/clearpath_gz/worlds/jackal_actor_world.sdf"
+# Keep both the controller package and the world owned by this repository.
+# The helper preserves the original Clearpath world before replacing its copy.
+bash "$REPO_DIR/scripts/setup_actor_controller.sh" "$WS"
 
 # ---------------------------------------------------------
 # Apply Humble world-spawn patch

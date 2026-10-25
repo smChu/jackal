@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "experiment_id": "5f8186cb-96db-47c1-b2e3-44bb0d0702ea",
+  "frame_id": "world",
+  "time_basis": "simulation_absolute",
+  "world": "jackal_actor_world",
+  "mappings": {
+    "human_1": "walking_person"
+  },
+  "gt_source": "gazebo_actor_world_pose",
+  "rate_hz": 20,
+  "timestamp_semantics": "Gazebo PostUpdate observation time; renderer pose may lag asynchronously",
+  "created_utc": "2026-10-24T17:43:18.002619+00:00",
+  "status": "invalidated",
+  "counts": {
+    "human_1": 242
+  },
+  "error": "Invalidated diagnostic run: cached Actor.WorldPose was stale because the test camera had no image subscriber. Do not use as fresh ground truth."
+}

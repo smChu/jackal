@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>jackal_actor_controller</name>
+  <version>0.1.0</version>
+  <description>ROS 2 PoseStamped control of Gazebo Fortress human actors.</description>
+  <maintainer email="maintainer@example.com">KROS Task 3</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>ignition-gazebo6</depend>
+  <depend>ignition-plugin1</depend>
+  <depend>ignition-rendering6</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

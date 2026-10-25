@@ -1,0 +1,13 @@
+{
+  "source": "real Gazebo Fortress renderer and Actor::WorldPose",
+  "single_actor": "walking_person",
+  "server_camera": "temporary integration fixture; production world unchanged",
+  "software_rendering": true,
+  "gui_visual_inspection": false,
+  "scenarios": [
+    "straight",
+    "turn",
+    "square"
+  ],
+  "created_utc": "2026-10-24T17:43:30.793261+00:00"
+}

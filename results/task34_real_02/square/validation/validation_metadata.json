@@ -1,0 +1,11 @@
+{
+  "experiment_id": "eb5864b6-aed7-4094-b6f8-bfab95d13d86",
+  "frame_id": "world",
+  "start_ros_time_ns": 19705000000,
+  "interpolation": "previous",
+  "max_gap_s": 0.5,
+  "target_sha256": "42cf9d3b8a702a0afdd7127908b33bb564484954ce19492515511f9bbc1e6c7a",
+  "gt_sha256": "a2d66b44cd049382adbe4d218952eaa71efad49ba4192bb4952d821b88874ec3",
+  "allow_partial": false,
+  "evaluation": "target evaluated at GT sample times, including the first post-end observation of the held final goal; no fitted offset or motion extrapolation"
+}

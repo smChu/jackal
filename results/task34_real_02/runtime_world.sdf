@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.8">
+
+  <world name="jackal_actor_world">
+
+    
+    
+    
+
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="libignition-gazebo-physics-system.so" name="ignition::gazebo::systems::Physics">
+    </plugin>
+
+    <plugin filename="libignition-gazebo-user-commands-system.so" name="ignition::gazebo::systems::UserCommands">
+    </plugin>
+
+    <plugin filename="libignition-gazebo-scene-broadcaster-system.so" name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
+
+    
+    <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+
+      <render_engine>ogre2</render_engine>
+
+    </plugin>
+
+    
+    <plugin filename="libjackal_actor_controller.so" name="jackal_actor_controller::ActorController">
+      <frame_id>world</frame_id>
+      <animation_timeout>0.3</animation_timeout>
+      <mapping>
+        <person_id>human_1</person_id>
+        <actor_name>walking_person</actor_name>
+        <topic>/humans/human_1/target_pose</topic>
+        <legacy_topic>/humans/walking_person/target_pose</legacy_topic>
+        <animation>walk</animation>
+        <yaw_offset>0</yaw_offset>
+      </mapping>
+    </plugin>
+
+
+    
+    
+    
+
+    <light type="directional" name="sun">
+
+      <cast_shadows>true</cast_shadows>
+
+      <pose>
+        0 0 10 0 0 0
+      </pose>
+
+      <diffuse>
+        0.8 0.8 0.8 1
+      </diffuse>
+
+      <specular>
+        0.2 0.2 0.2 1
+      </specular>
+
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+
+      <direction>
+        -0.5 0.1 -0.9
+      </direction>
+
+    </light>
+
+
+    
+    
+    
+
+    <model name="ground_plane">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>30 30</size>
+            </plane>
+          </geometry>
+
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>30 30</size>
+            </plane>
+          </geometry>
+
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+
+        </visual>
+
+      </link>
+
+    </model>
+
+
+    
+    
+    
+
+    <model name="box_1">
+
+      <static>true</static>
+
+      <pose>
+        3 2 0.5 0 0 0
+      </pose>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.2 0.4 0.8 1</ambient>
+            <diffuse>0.2 0.4 0.8 1</diffuse>
+          </material>
+        </visual>
+
+      </link>
+
+    </model>
+
+
+    
+    
+    
+
+    <model name="box_2">
+
+      <static>true</static>
+
+      <pose>
+        -3 2 0.75 0 0 0
+      </pose>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.5 1.5 1.5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.5 1.5 1.5</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.8 0.3 0.2 1</ambient>
+            <diffuse>0.8 0.3 0.2 1</diffuse>
+          </material>
+        </visual>
+
+      </link>
+
+    </model>
+
+
+    
+    
+    
+
+    <actor name="walking_person">
+
+      <skin>
+
+        <filename>/home/sm/.ignition/fuel/fuel.gazebosim.org/mingfei/models/actor/1/meshes/walk.dae</filename>
+
+        <scale>1.0</scale>
+
+      </skin>
+
+
+      <animation name="walk">
+
+        <filename>/home/sm/.ignition/fuel/fuel.gazebosim.org/mingfei/models/actor/1/meshes/walk.dae</filename>
+
+        <interpolate_x>true</interpolate_x>
+
+      </animation>
+
+
+      <script>
+
+        <loop>true</loop>
+
+        <delay_start>0.0</delay_start>
+
+        <auto_start>true</auto_start>
+
+
+        <trajectory id="0" type="walk" tension="0.6">
+
+          
+          <waypoint>
+            <time>0.0</time>
+            <pose>-2 -2 1.0 0 0 0</pose>
+          </waypoint>
+
+
+          
+          <waypoint>
+            <time>4.0</time>
+            <pose>2 -2 1.0 0 0 0</pose>
+          </waypoint>
+
+
+          
+          <waypoint>
+            <time>4.5</time>
+            <pose>2 -2 1.0 0 0 1.5708</pose>
+          </waypoint>
+
+
+          
+          <waypoint>
+            <time>8.5</time>
+            <pose>2 2 1.0 0 0 1.5708</pose>
+          </waypoint>
+
+
+          
+          <waypoint>
+            <time>9.0</time>
+            <pose>2 2 1.0 0 0 3.14159</pose>
+          </waypoint>
+
+
+          
+          <waypoint>
+            <time>13.0</time>
+            <pose>-2 2 1.0 0 0 3.14159</pose>
+          </waypoint>
+
+
+          
+          <waypoint>
+            <time>13.5</time>
+            <pose>-2 2 1.0 0 0 -1.5708</pose>
+          </waypoint>
+
+
+          
+          <waypoint>
+            <time>17.5</time>
+            <pose>-2 -2 1.0 0 0 -1.5708</pose>
+          </waypoint>
+
+
+          
+          <waypoint>
+            <time>18.0</time>
+            <pose>-2 -2 1.0 0 0 0</pose>
+          </waypoint>
+
+        </trajectory>
+
+      </script>
+
+    </actor>
+
+
+  <model name="gt_test_camera"><static>true</static>
+      <pose>5 0 3 0 0.35 3.14159265359</pose><link name="camera_link">
+      <sensor name="camera" type="camera"><always_on>true</always_on><update_rate>20</update_rate>
+      <topic>/gt_test_camera/image</topic><camera><horizontal_fov>1.2</horizontal_fov>
+      <image><width>64</width><height>64</height><format>R8G8B8</format></image>
+      <clip><near>0.1</near><far>30</far></clip></camera></sensor></link></model></world>
+
+</sdf>

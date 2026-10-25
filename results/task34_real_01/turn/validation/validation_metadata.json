@@ -1,0 +1,11 @@
+{
+  "experiment_id": "cfdc5e22-5c02-49e9-b308-737cf1fd0bc6",
+  "frame_id": "world",
+  "start_ros_time_ns": 11645000000,
+  "interpolation": "previous",
+  "max_gap_s": 0.5,
+  "target_sha256": "0205306402a856a8e4b1bf06fcd36eac2c41fcd228527ec4ca3c10c8756a0a74",
+  "gt_sha256": "8facd105b6b4f010411166e2c1b02dde86faa7221ae3c964b5ee8d66fac89752",
+  "allow_partial": false,
+  "evaluation": "target evaluated at GT sample times; no fitted offset or extrapolation"
+}

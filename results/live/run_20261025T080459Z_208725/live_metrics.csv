@@ -1,0 +1,2 @@
+person_id,samples,full_time_coverage,interpolated_gt_samples,mean_position_error_m,rmse_m,maximum_position_error_m,mean_absolute_yaw_error_rad
+human_1,745,True,744,0.013785761612432456,0.014926784475610575,0.034494561945926226,0.014706494673332864

@@ -1,0 +1,135 @@
+header {
+  stamp {
+    nsec: 84000000
+  }
+}
+pose {
+  name: "ground_plane"
+  id: 4
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "box_1"
+  id: 8
+  position {
+    x: 3
+    y: 2
+    z: 0.5
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "box_2"
+  id: 12
+  position {
+    x: -3
+    y: 2
+    z: 0.75
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "gt_test_camera"
+  id: 16
+  position {
+    x: 5
+    z: 3
+  }
+  orientation {
+    x: -0.17410813759359592
+    y: -1.8004792995140128e-14
+    z: 0.98472653890493356
+    w: -1.0175766139562169e-13
+  }
+}
+pose {
+  name: "link"
+  id: 5
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "link"
+  id: 9
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "link"
+  id: 13
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "camera_link"
+  id: 17
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "visual"
+  id: 6
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "visual"
+  id: 10
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "visual"
+  id: 14
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "sunVisual"
+  id: 21
+  position {
+  }
+  orientation {
+    w: 1
+  }
+}
+pose {
+  name: "sun"
+  id: 20
+  position {
+    z: 10
+  }
+  orientation {
+    w: 1
+  }
+}
+

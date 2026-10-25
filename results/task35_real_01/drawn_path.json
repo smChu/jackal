@@ -1,0 +1,37 @@
+{
+  "frame_id": "world",
+  "paths": {
+    "human_1": {
+      "frame_id": "world",
+      "time_basis": "relative_seconds",
+      "person_id": "human_1",
+      "actor_name": "walking_person",
+      "speed_m_s": 0.5,
+      "sample_rate_hz": 20,
+      "waypoints": [
+        [
+          -1.5,
+          -1.5
+        ],
+        [
+          -0.5,
+          -1.5
+        ],
+        [
+          -0.5,
+          -1.2011140997369827
+        ],
+        [
+          -0.5,
+          -0.8971668999374316
+        ],
+        [
+          -0.5,
+          -0.5
+        ]
+      ],
+      "bounded_4x4": true,
+      "interpolation": "piecewise linear at constant speed; yaw follows each segment"
+    }
+  }
+}

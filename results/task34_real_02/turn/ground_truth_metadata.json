@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "experiment_id": "94d02b7c-d420-4e1d-b73b-0ba2c28f0b9a",
+  "frame_id": "world",
+  "time_basis": "simulation_absolute",
+  "world": "jackal_actor_world",
+  "mappings": {
+    "human_1": "walking_person"
+  },
+  "gt_source": "gazebo_rendered_actor_world_pose",
+  "rate_hz": 20,
+  "timestamp_semantics": "rendering Scene.Time() at SceneUpdate, in the /clock simulation epoch",
+  "keepalive_image_topic": "/j100_0000/sensors/camera_0/color/image",
+  "created_utc": "2026-10-24T17:49:05.781582+00:00",
+  "status": "complete",
+  "counts": {
+    "human_1": 161
+  },
+  "error": null
+}

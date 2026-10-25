@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "experiment_id": "cfd08d69-b120-4cf8-a7f9-1ed495f3fb31",
+  "frame_id": "world",
+  "time_basis": "simulation_absolute",
+  "target_time_basis": "relative_seconds",
+  "interpolation": "previous",
+  "target_sha256": "05eddab80d11a8c557dc19ad3ea793ff2dbe4d20e986beb2e1fabeda6fa3e8b2",
+  "person_ids": [
+    "human_1"
+  ],
+  "start_ros_time_ns": 905820000000
+}

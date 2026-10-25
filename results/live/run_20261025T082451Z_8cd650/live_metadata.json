@@ -1,0 +1,14 @@
+{
+  "frame_id": "world",
+  "start_ros_time_ns": 30977000000,
+  "target_interpolation": "linear",
+  "gt_interpolation": "linear between observed endpoints",
+  "requested_grid_rate_hz": 50,
+  "graph_point_limit": 5000,
+  "metric_basis": "display comparison grid; interpolated GT is explicitly marked",
+  "initial_placement": "pre-playback waiting poses excluded from interpolation; comparison begins at first in-run GT observation",
+  "raw_ground_truth_csv": "ground_truth.csv",
+  "target_sha256": "217f536c9eedddf6daf4a81126909fef2a7752fbb8c1f47498c5fd8e2d57f113",
+  "xy_display_camera_yaw_deg": 0.0,
+  "display_transform": "view only; CSV, ROS messages and error calculations remain in world XY"
+}

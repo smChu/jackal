@@ -1,0 +1,41 @@
+{
+  "mouse_draw_move_delete_undo_redo_numeric_validation": true,
+  "waypoints": [
+    [
+      -1.5,
+      -1.5
+    ],
+    [
+      -0.5,
+      -1.5
+    ],
+    [
+      -0.5,
+      -1.2011140997369827
+    ],
+    [
+      -0.5,
+      -0.8971668999374316
+    ],
+    [
+      -0.5,
+      -0.5
+    ]
+  ],
+  "preview_does_not_publish": true,
+  "publisher_returncode": 0,
+  "raw_samples": 117,
+  "comparison_samples": 201,
+  "full_time_coverage": true,
+  "mean_error_m": 0.001999999999293619,
+  "max_error_m": 0.002000045776367143,
+  "first_gt_xy": [
+    -1.5,
+    -1.5
+  ],
+  "last_gt_xy": [
+    -0.5,
+    -0.5019999980926514
+  ],
+  "output_dir": "/tmp/jackal_task35_verification/runs/run_20261025T074637Z_b89a13"
+}

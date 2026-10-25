@@ -1,0 +1,16 @@
+{
+  "source": "real Gazebo Fortress SceneUpdate / rendered actor node WorldPose",
+  "single_actor": "walking_person",
+  "server_camera": "temporary integration fixture; production world unchanged",
+  "software_rendering": true,
+  "gui_visual_inspection": false,
+  "scenarios": [
+    "straight",
+    "turn",
+    "square"
+  ],
+  "created_utc": "2026-10-24T17:49:27.626516+00:00",
+  "valid_ground_truth": true,
+  "gt_source": "SceneUpdate / rendering actor Visual.WorldPose / Scene.Time",
+  "input_pose_topics_actor_present": false
+}

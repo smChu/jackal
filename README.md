@@ -132,6 +132,62 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard \
 ```
 
 ## Notes
+Task 3-1 provides a standalone Python generator for straight, turning, and
+circular human trajectories, with CSV export. It requires no ROS installation:
+
+```bash
+python3 scripts/generate_trajectory.py --scenario straight --output trajectories/straight.csv
+```
+
+See [the trajectory generator guide](docs/trajectory_generator.md) for Korean
+instructions, coordinate and timestamp conventions, and examples.
+
+Task 3-2 publishes those CSV targets over ROS 2 as `PoseStamped` messages:
+
+```bash
+source /opt/ros/humble/setup.bash
+python3 scripts/trajectory_publisher.py --csv trajectories/straight.csv
+```
+
+See [the trajectory publisher guide](docs/trajectory_publisher.md) for topic
+inspection, simulation time, and the interface for a future Gazebo controller.
+
+Task 3-3 controls `walking_person` using a Fortress System Plugin. It accepts
+`PoseStamped` commands for logical ID `human_1` and the existing `walking_person`
+topic. See [the actor controller guide](docs/actor_controller.md) for the
+workspace symlinks, build, execution order, mappings, and verification limits.
+After updating this repository, build `jackal_actor_controller` and source the
+workspace before launching the updated world.
+
+Task 3-4 records independently observed actor poses and compares them with the
+replayed target. Open the live Python UI to compare a CSV and Gazebo GT:
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/jackal_actor_ws/install/setup.bash
+python3 scripts/trajectory_viewer.py --csv trajectories/human_1_right_turn.csv
+```
+
+Click **Start trajectory** in the window. Measured GT points, linearly
+interpolated paths, and errors update live. CSV recording is automatic; trajectory
+PNG saving has been removed. See the [live comparison guide](docs/ground_truth_validation.md)
+for the two-terminal workflow, interpolation rules, and output CSVs.
+
+Task 3-5 adds mouse drawing, waypoint dragging/deletion, numeric editing,
+Undo/Redo, speed/rate settings, and CSV export to the same Python UI:
+
+```bash
+python3 scripts/trajectory_viewer.py --start-delay 3
+```
+
+Click **Draw / edit path**, draw a route, then choose **Use path / preview**
+or **Send to Gazebo**. The existing Publisher and Controller execute the path,
+and actual GT is recorded and compared live. The default XY view matches the
+Clearpath Gazebo camera (+X up, +Y left); the view selector/yaw control changes
+only display orientation, while CSV and ROS messages stay in world coordinates.
+See the [trajectory GUI guide](docs/trajectory_gui.md)
+for setup, editing, time conversion, and validation limits.
+
 This repository does not vendor the Clearpath ROS repositories. Exact
 dependencies are recorded in dependencies.repos and imported using
 vcstool.
